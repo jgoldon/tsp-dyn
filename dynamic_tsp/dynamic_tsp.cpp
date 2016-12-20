@@ -2,10 +2,16 @@
 //
 
 #include "stdafx.h"
-
+#include "Generator.h"
+#include "Graph.h"
 
 int main()
 {
-    return 0;
+	//Generator(5);
+	auto g = new Graph("liczby.txt");
+	g->Load();
+	cout << g->tsp_solver() << endl;
+	g->drawPath();
+	system("pause");
+	return 0;
 }
-
