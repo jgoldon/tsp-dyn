@@ -89,11 +89,13 @@ void Graph::getPath(int start, int set)
 	int x = p[start].at(set);
 	int mask = pow(2, Dimension) - 1 - (int)pow(2, x);
 	int masked = set & mask;
-	cout << x << endl;
+	cout << x << " --- ";
 	getPath(x, masked);
 }
 
 void Graph::drawPath()
 {
+	cout << "0 --- ";
 	getPath(0, (pow(2, Dimension) - 2));
+	cout << "0" << endl << endl;
 }
