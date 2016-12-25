@@ -32,7 +32,7 @@ void cos(int n)
 	int size2;
 	int number2 = n;
 	double times2 = 0;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 30; i++)
 	{
 		//ifstream file;
 		//file.open("t_" + to_string(number2) + to_string(i) + ".txt");
@@ -52,7 +52,7 @@ void cos(int n)
 	}
 	ofstream file;
 	file.open("wd_" + to_string(number2) + ".txt");
-	file << times2 / 10;
+	file << times2 / 30;
 	file.close();
 }
 
